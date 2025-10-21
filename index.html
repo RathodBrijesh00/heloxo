@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HeloXO Kids | Official Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ====== Header / Navbar ====== -->
+  <header>
+    <div class="logo">HeloXOKids</div>
+    <nav>
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ====== Home Section ====== -->
+  <section id="home" class="hero">
+    <h1>Welcome to HeloXO Kids</h1>
+    <p>Fun, Fashion & Comfort for every little star ✨</p>
+    <button onclick="scrollToShop()">Explore Collection</button>
+   
+  </section>
+
+  <!-- ====== Shop Section ====== -->
+  <section id="shop" class="shop">
+    <h2>Our Collection</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="pic1.jpg" alt="">
+        <h3>Cute Dress</h3>
+        <p>₹999</p>
+      </div>
+      <div class="card">
+        <img src="pic2.jpg" alt="">
+        <h3>Printed Tee</h3>
+        <p>₹499</p>
+      </div>
+      <div class="card">
+        <img src="pic3.jpg" alt="">
+        <h3>Kids Hoodie</h3>
+        <p>₹699</p>
+      </div>
+      <div class="card">
+        <img src="pic4.jpg" alt="">
+        <h3>Denim Shorts</h3>
+        <p>₹799</p>
+      </div>
+    </div>
+
+    <!-- Image Popup -->
+<div id="imgPopup" class="img-popup">
+  <span class="close" onclick="closeImage()">&times;</span>
+  <img id="popupImg" src="">
+  <div class="caption"></div>
+</div>
+  </section>
+
+
+  <!-- ====== About Section ====== -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>At HeloXO Kids, we believe fashion should be fun, comfy, and colorful — just like childhood!  
+       Our mission is to make your little ones shine with stylish, safe, and affordable wear.  
+       Established in 2023, we’re inspired by creativity, joy, and the playful spirit of kids everywhere. ❤️</p>
+  </section>
+
+    <!-- ===== Location Section ===== -->
+<section id="location" class="location">
+  <h2>Our Store Location</h2>
+  <div class="map-container">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.3593244393783!2d72.57307337516757!3d23.12053767910524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e83d8deb59d0b%3A0x26b31650d240e292!2sHeloxo%20Kid&#39;s!5e0!3m2!1sen!2sin!4v1761025149065!5m2!1sen!2sin" 
+      width="100%" 
+      height="400" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy"></iframe>
+  </div>
+</section>
+
+  <!-- ====== Contact Section ====== -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="showThanks(event)">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" rows="4"></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+
+
+  <!-- ====== Footer ====== -->
+  <footer>
+    <p>© 2025 HeloXO Kids | Designed with ❤️ for Happy Kids</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
