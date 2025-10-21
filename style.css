@@ -361,3 +361,18 @@ footer {
     font-size: 2rem;
   }
 }
+
+.install-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff3b3b;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 5px 15px rgba(255,59,59,0.4);
+}
+    

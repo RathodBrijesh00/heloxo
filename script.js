@@ -57,3 +57,29 @@ window.addEventListener('scroll', () => {
     mapContainer.style.animationPlayState = 'running';
   }
 });
+
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./sw.js")
+    .then(() => console.log("Service Worker registered"))
+    .catch(err => console.log("Service Worker registration failed:", err));
+}
+
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+
+  const addBtn = document.createElement('button');
+  addBtn.textContent = "Install HeloXO App";
+  addBtn.className = "install-btn";
+  document.body.appendChild(addBtn);
+
+  addBtn.addEventListener('click', () => {
+    deferredPrompt.prompt();
+    deferredPrompt.userChoice.then(choiceResult => {
+      if (choiceResult.outcome === 'accepted') console.log('App installed');
+      addBtn.style.display = 'none';
+    });
+  });
+});
+
