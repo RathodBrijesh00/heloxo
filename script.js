@@ -83,3 +83,15 @@ window.addEventListener('beforeinstallprompt', (e) => {
   });
 });
 
+
+document.querySelectorAll('.buy-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    alert('Thank you for choosing HeloXO Kids! Checkout coming soon.');
+  });
+});
+
+document.querySelectorAll('.add-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    alert('Item added to cart!');
+  });
+});
